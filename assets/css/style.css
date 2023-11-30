@@ -1,0 +1,343 @@
+/* color scheme sourced from http://khroma.co/generator/ */
+:root {
+    --background: #e3e9ee;
+    --turquoise: #6fd6e2;
+    --white: #000000;
+    --gray: #131212;
+    --blue: #10406c;
+    --image: #1b495c;
+    --border: 10px solid var(--turquoise);
+    --h1: 6rem;
+    --h3: 3rem;
+    --margin-right-header: 100px;
+    --margin-right-row: 100px;
+    --margin-right-footer: 100px;
+}
+
+html {
+    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+}
+  
+body {
+    /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
+    font-family:Arial, Helvetica, sans-serif;
+  
+    /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px*/
+    color: var(--gin);
+    background-color: var(--background);
+}
+
+/*BEGIN MENU HEADER*/
+.header {
+    background-color: #363333;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#left-header {
+    flex-grow: 1;
+}
+
+#right-header {
+    flex-grow: 3;
+}
+
+/*Name Style*/
+.header div h1 {
+    font-size: 6rem;
+    background-color: var(--turquoise);
+    color: var(--gray);
+    text-align: right;
+    margin-top: 15px;
+    padding: 15px;
+    padding-right: 10px;
+}
+
+
+.header .header-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 70px;
+    margin-right: var(--margin-right-header);
+    font-size: 24px;
+}
+
+.header-menu div {
+    margin: 1.5rem;
+    position: relative;
+}
+
+#line-header {
+    height: 5px;
+    width: 100%;
+    position: relative;
+    top: -20px;
+    left: -15px;
+    background-color: var(--turquoise);
+}
+
+.header-menu div a {
+    color: var(--turquoise);
+    text-decoration: none;
+    font-size: 4rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+}
+
+/*END MENU HEADER*/
+
+#img {
+    position: relative;
+    width: 100%;
+    background-color: var(--image);
+    height: 300px;
+}
+
+#img div {
+    position: absolute;
+    right: var(--margin-right-header);
+    bottom: 50px;
+}
+
+#img div h1 {
+    font-size: 500%;
+    background-color: var(--turquoise);
+    color: var(--gray);
+    text-align: right;
+    padding: 10px;
+}
+
+/*First Row*/
+.row {
+    display: flex;
+    margin-right: 10rem;
+    margin-top: 5rem;
+}
+
+.left-row{
+    flex: 1 0 20%;
+    border-right: 5px solid var(--blue);
+}
+
+.right-row{
+    flex: 2 0 80%;
+    padding: 1rem 0 5rem 5rem;
+    margin-right: var(--margin-right-row);
+}
+
+.row div .text {
+    font-size: 6rem;
+    color: var(--blue);
+    text-align: right;
+    margin-top: 15px;
+    padding: 15px 15px 90px 0px;
+}
+
+.row div p {
+    font-size: 2.2rem;
+    line-height: 1.5;
+    color: #10406cdb;
+    text-align: justify;
+}
+
+/*Second Row*/
+.row-2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.row div #top-container {
+    width: 100%;
+    position: relative;
+    background-color: var(--image);
+    height: 700px;
+    margin-bottom: 20px;
+    border: var(--border)
+}
+
+.row div #bottom-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+.box {
+    width: 48%;
+    border: var(--border);
+    background-color: var(--image);
+    height: 280px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0.7);
+    transition: .4s ease;
+}
+
+img:hover {
+    filter: grayscale(0);
+    cursor: pointer;
+}
+
+#box1 {
+    margin: 0 2% 2% 0;
+    position: relative;
+}
+
+#box2 {
+    margin: 0 0 2% 2%;
+    position: relative;
+}
+
+#box3 {
+    margin: 2% 2% 0 0;
+    position: relative;
+}
+
+#box4 {
+    margin: 2% 0 0 2%;
+    position: relative;
+}
+
+.floating-container {
+    position: absolute;
+    background-color: var(--turquoise);
+    margin: 0 auto;
+    height: 140px;
+    bottom: 40px;
+    padding: 20px;
+}
+
+.floating-container .text1 {
+    font-size: 5rem;
+    color: var(--blue);
+    padding: 0;
+    margin: 0;
+}
+
+.floating-container h3 {
+    font-size: 2rem;
+    color: #10406cb9;
+    font-weight: lighter;
+}
+
+/*Footer*/
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: var(--margin-right-footer);
+}
+
+.footer div {
+    margin: 1.5rem;
+    position: relative;
+    line-height: 70px;
+}
+
+#line-footer {
+    height: 5px;
+    width: 100%;
+    position: relative;
+    top: -10px;
+    left: -15px;
+    background-color: var(--blue);
+}
+
+.footer div a {
+    color: black;
+    text-decoration: none;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+}
+
+.code-card:hover,
+.code-card:hover .card-header {
+  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
+}
+
+/* media query for larger screens */
+@media screen and (max-width: 1350px) {
+
+    :root {
+        --margin-right-header: 50px;
+        --margin-right-row: 0;
+        --margin-right-footer: 0;
+    }
+
+    .row {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .left-row{
+        flex: 1 0 100%;
+        border: 0px solid var(--blue);
+    }
+ 
+    .right-row{
+        padding: 1rem 5rem 5rem 5rem;
+    }
+
+    .row div .text {
+        text-align: center;
+        margin-top: 15px;
+        padding: 10px 0;
+    }
+
+    .text br {
+        display: none;
+    }
+}
+
+/* media query for larger screens */
+@media screen and (max-width: 992px) {
+
+    .header div h1 {
+        text-align: center;
+    }
+
+    .row div #bottom-container {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+        border: var(--border);
+        background-color: var(--image);
+        height: 280px;
+    }
+
+    #box1, #box2, #box3, #box4 {
+        margin: 0 0 2% 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header .header-menu {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
